@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Gene Drawer 1.0</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- CSS Plugins -->
+    <link href="plugins/pick-a-color-1.2.3/build/1.2.3/css/pick-a-color-1.2.3.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Gene Drawer 1.0</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+          <label>Gene Information</label>
+          <input type="text" class="form-control" placeholder="Gene name" id="gene-name"> <br/>
+          <input type="text" class="form-control" placeholder="Gene size" id="gene-size"> <br/>
+          <label>Coding Region</label>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Start" id="coding-region-start">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="End" id="coding-region-end">
+            </div>
+          </div><br/>
+          <label>Exons</label> <a href="#" id="add-exon-option"><i class="glyphicon glyphicon-plus pull-right"></i></a>
+          <div class="row" id="exons">
+            <div class="col-md-6">
+              <input type="text" class="form-control exon-start" placeholder="Start">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control exon-end" placeholder="End">
+            </div>
+          </div><br/>
+          <label>SNPs</label> <a href="#" id="add-snp-option"><i class="glyphicon glyphicon-plus pull-right"></i></a>
+          <div class="row" id="snps">
+            <div class="col-md-6">
+              <input type="text" class="form-control snp-id" placeholder="ID">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control snp-position" placeholder="Position">
+            </div>
+          </div><br/>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right">
+                <button type="button" class="btn btn-default" id="clear">Clear All</button>
+                <button type="button" class="btn btn-primary" id="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+          <br/>
+        </div>
+        <div class="col-md-10">
+          <svg width="1100" height="500" id="svg-div">
+          </svg>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Custom js -->
+    <script src="js/gene_drawer.js"></script>
+    <!-- Plugins js -->
+    <script src="plugins/pick-a-color-1.2.3/build/dependencies/tinycolor-0.9.15.min.js"></script>
+    <script src="plugins/pick-a-color-1.2.3/build/1.2.3/js/pick-a-color-1.2.3.min.js"></script>
+  </body>
+</html>
